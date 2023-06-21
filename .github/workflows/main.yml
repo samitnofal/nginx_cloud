@@ -37,7 +37,7 @@ jobs:
       - name: Deploy to Minikube
         run: kubectl apply -f deployment.yaml
 
-      -name: Test the application
+      - name: Test the application
         run: ./run_test_curl_on_server.sh
 
 
