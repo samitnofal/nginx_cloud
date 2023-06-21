@@ -2,7 +2,7 @@
 
 set -e
 
-#kubectl expose deployment nginx-world --type=NodePort --port=80
+minikube kubectl -- expose deployment nginx-world --type=NodePort --port=80
 
 # Get the service URL
 service_url=$(minikube service nginx-world --url )

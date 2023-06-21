@@ -33,11 +33,15 @@ jobs:
 
       - name: Load Docker image into Minikube
         run: minikube image load nginx_image:latest
-
+      
       - name: Deploy to Minikube
-        run: kubectl apply -f deployment.yaml
+        run: minikube kubectl -- apply -f deployment.yaml
 
       - name: Test the application
         run: ./run_test_curl_on_server.sh
+
+      - name: List Minikube services
+        run: minikube service list
+      
 
 
