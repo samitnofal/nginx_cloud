@@ -1,0 +1,15 @@
+---
+- name: Get Endpoint Content
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: Retrieve endpoint content
+      uri:
+        url: "{{ my_url }}"
+        return_content: yes
+      register: response
+
+    - name: Display endpoint content
+      debug:
+        var: response.content     
