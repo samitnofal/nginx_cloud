@@ -39,9 +39,3 @@ jobs:
 
       - name: Test the application
         run: ./run_test_curl_on_server.sh
-
-      - name: List Minikube services
-        run: minikube service list
-      
-
-
